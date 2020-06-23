@@ -1,0 +1,102 @@
+obj.prototype
+Object.defineProperty(object, property, descriptor)
+
+// Adding or changing many object properties
+Object.defineProperties(object, descriptors)
+
+// Accessing Properties
+Object.getOwnPropertyDescriptor(object, property)
+
+// Returns all properties as an array
+Object.getOwnPropertyNames(object)
+
+// Returns enumerable properties as an array
+Object.keys(object)
+
+// Accessing the prototype
+Object.getPrototypeOf(object)
+
+// Prevents adding properties to an object
+Object.preventExtensions(object)
+// Returns true if properties can be added to an object
+Object.isExtensible(object)
+
+// Prevents changes of object properties (not values)
+Object.seal(object)
+// Returns true if object is sealed
+Object.isSealed(object)
+
+// Prevents any changes to an object
+Object.freeze(object)
+// Returns true if object is frozen
+Object.isFrozen(object)
+
+The Function() Constructor
+
+call and apply
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  var username = getCookie("username");
+  if (username != "") {
+   alert("Welcome again " + username);
+  } else {
+    username = prompt("Please enter your name:", "");
+    if (username != "" && username != null) {
+      setCookie("username", username, 365);
+    }
+  }
+}
+
+new XMLHttpRequest()	Creates a new XMLHttpRequest object
+abort()	Cancels the current request
+getAllResponseHeaders()	Returns header information
+getResponseHeader()	Returns specific header information
+open(method, url, async, user, psw)	Specifies the request
+
+method: the request type GET or POST
+url: the file location
+async: true (asynchronous) or false (synchronous)
+user: optional user name
+psw: optional password
+send()	Sends the request to the server
+Used for GET requests
+send(string)	Sends the request to the server.
+Used for POST requests
+setRequestHeader()	Adds a label/value pair to the header to be sent
+
+
+onreadystatechange	Defines a function to be called when the readyState property changes
+readyState	Holds the status of the XMLHttpRequest.
+0: request not initialized
+1: server connection established
+2: request received
+3: processing request
+4: request finished and response is ready
+
+
+promises
+callbacks
+async await

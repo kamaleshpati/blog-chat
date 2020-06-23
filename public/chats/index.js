@@ -1,0 +1,1 @@
+document.querySelector("#username").value = localStorage.getItem("name");

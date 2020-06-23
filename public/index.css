@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+.homepage {
+    position: fixed;
+    top: 0em;
+    left: 0em;
+    height: 100vw;
+    width: 100vw;
+    background-image: url('./img7.jpg');
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+}
+
+.homepage .menu {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 10vh;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu li {
+    color: aliceblue;
+    width: 15vw;
+    text-align: center;
+    font-size: 5vh;
+}
+
+.menu li:hover {
+    color: aliceblue;
+    border-bottom: 5px solid aliceblue;
+    cursor: grab;
+}
+
+.homepage #intro {
+    width: 30vw;
+    position: absolute;
+    top: 20vh;
+    left: 5vw;
+    box-shadow: inset 0 0 2000px rgba(20, 20, 20, 0.5);
+    font-size: 5vh;
+    padding: 2vh;
+    transition: all 2s;
+    color: lightsalmon;
+}
+
+.homepage #sign-in {
+    width: 40vw;
+    position: absolute;
+    top: 20vh;
+    right: 5vw;
+    color: cyan;
+    box-shadow: inset 0 0 2000px lightcyan;
+    font-size: 5vh;
+    padding: 2vh;
+    opacity: 0;
+    transition: all 2s;
+}
+
+.homepage #log-in {
+    width: 40vw;
+    position: absolute;
+    top: 20vh;
+    right: 5vw;
+    color: cyan;
+    box-shadow: inset 0 0 2000px lightcyan;
+    font-size: 5vh;
+    padding: 2vh;
+    opacity: 0;
+    transition: all 2s;
+}
+
+.homepage table {
+    margin: 3vh;
+}
+
+.homepage #sign-in input[type="button"],
+.homepage #log-in input[type="button"] {
+    font-size: 3vh;
+    height: 6vh;
+    width: 6vw;
+}
+
+.homepage #sign-in input[type="text"],
+.homepage #sign-in input[type="email"],
+.homepage #sign-in input[type="password"],
+.homepage #log-in input[type="email"],
+.homepage #log-in input[type="password"] {
+    box-sizing: border-box;
+    border: 0em;
+    height: 4.5vh;
+    width: 25vw;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
